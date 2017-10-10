@@ -25,7 +25,7 @@ class Projects extends Component {
       }, {
         title : "Central African",
         image : "https://i.pinimg.com/originals/5f/82/e2/5f82e27d4e13b8da2ce7df473adbc750.jpg",
-        description : "art fro the Congo",
+        description : "art from the Congo",
         link : "https://en.wikipedia.org/wiki/Tribal_art"
       }]
     }
@@ -33,10 +33,16 @@ class Projects extends Component {
     
       render() {
         const projects = this.state.projects;
+        // map function here to add indexes?
+        let newThang = projects.map(thing => <Project details={thing} />)
 
         return (
           <div>
-            <Project details={projects} />
+            {newThang}
+            {/* <Project details={projects[0]} />
+            <Project details={projects[1]} />
+            <Project details={projects[2]} />
+            <Project details={projects[3]} /> */}
           </div>
         );
       }
@@ -49,3 +55,8 @@ class Projects extends Component {
     //component for each project in loop
     // project properties as props
     //  Image, title, description, link to github
+
+
+    /**
+     * 
+     */
