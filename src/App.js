@@ -3,6 +3,7 @@ import './App.css';
 import {Route, Switch, Link, withRouter } from 'react-router-dom';
 import Home from './Components/Home';
 import Project from './Components/Project';
+import ProjectDetails from './Components/ProjectDetails';
 import Projects from './Components/Projects';
 import Resume from './Components/Resume';
 import Contact from './Components/Contact';
@@ -26,7 +27,7 @@ class App extends Component {
             <Switch>
               <Route path="/home" component={Home} />
               <Route exact path="/projects" component={Projects} />
-              <Route path="/projects/:id" component={Project} />
+              <Route path="/projects/:id" component={ProjectDetails} />
               <Route path="/resume" component={Resume} />
               <Route path="/contact" component={Contact} />
             </Switch>

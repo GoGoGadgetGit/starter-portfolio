@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import { withRouter } from 'react-router-dom';
 import Starbar from './Starbar';
+import { Link } from 'react-router-dom';
+
 
 class Project extends Component {
   constructor(props) {
@@ -16,9 +18,9 @@ class Project extends Component {
 
         return (
           <div>
-            {/* <Starbar /> */}
-            <h2>{this.props.details.title}</h2>
-            <img src={this.props.details.image}/>
+            <Starbar />
+            <Link to={"/projects/" + this.props.details.id}>{this.props.details.title}</Link>
+            <img src={this.props.details.image} alt="body art"/>
             <p>{this.props.details.description}</p>
             <a href={this.props.details.link}>Link</a>
 
